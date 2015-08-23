@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<ul>
+    {% for uu in u %}
+    <li>{{ uu.name }}, {{ uu.phone }}, {{ uu.email }}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

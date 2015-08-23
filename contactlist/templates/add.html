@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+<html>
+  <head>
+    <title>ADD CONTACT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+
+{% block body %}
+	
+   <div class="well well-large">
+      <!--IMG SRC="add.jpg" WIDTH=75 HEIGHT=75 BORDER=2 ALIGN=LEFT-->
+   		<H2>&nbsp; <U> ADD CONTACTS</U></H2>
+	 </div>
+
+{% if error %}<p class=error><strong>Error:</strong> {{ error }}{% endif %}
+    <form class="form-search" action="{{ url_for('add') }}" method=post >
+      <TABLE BORDER =0>
+        <TR>
+          <TD>Name
+          <TD><input type="text" name="name" placeholder="Enter Name">
+
+        <TR>
+          <TD>Email
+          <TD><input type="text" name="email" placeholder="Enter Email ID">
+
+        <TR>
+          <TD>Phone
+          <TD><input type="text" name="phone" placeholder="Enter Phone">
+        <TR>
+          <TD>
+          <TD><input type="submit" value="Add"> <input type="reset" value="Reset">
+      </TABLE>
+    </form>
+
+    <p class="muted credit"> Made by <a href=mailto:meetalimnnit@gmail.com>Meetali Singh</a></p>
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+{% endblock %}
+
+

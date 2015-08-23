@@ -1,0 +1,42 @@
+
+{% extends "base.html" %}
+
+<html>
+  <head>
+    <title>REMOVE CONTACT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+
+{% block body %}
+	
+   <div class="well well-large">
+      <!--IMG SRC="file:///home/meetali/Desktop/simpleFlaskContact-master/contactlist/templates/add.jpg" WIDTH=75 HEIGHT=75 BORDER=2 ALIGN=LEFT-->
+   		<H2>&nbsp; <U> REMOVE CONTACTS</U></H2>
+	 </div>
+
+{% if error %}<p class=error><strong>Error:</strong> {{ error }}{% endif %}
+
+    <form class="form-search" action="{{ url_for('delete') }}" method=post >
+      <TABLE BORDER =0>
+        <TR>
+          <TD>Name
+          <TD><input type="text" name="name" placeholder="Enter Name">
+
+        <TR>
+          <TD>
+          <TD><input type="submit" value="Remove"> <input type="reset" value="Reset">
+      </TABLE>
+    </form>
+
+    <p class="muted credit"> Made by <a href=mailto:meetalimnnit@gmail.com>Meetali Singh</a></p>
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+{% endblock %}
+
+
+
+
